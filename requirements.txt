@@ -1,2 +1,8 @@
-flask
+Flask
+Flask-Bootstrap
+# Flask-Login
+# Flask-SQLAlchemy
+# Flask-Uploads
+# Flask-WTF
 gunicorn
+# psycopg2-binary
