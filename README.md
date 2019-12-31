@@ -16,7 +16,14 @@ statsmodels
 torch==1.3
 ```
 
-3. Run containers:
+3. Change image name in docker-compose file:
+```
+...
+    image: docker_user/app_name:tag
+...
+```
+
+4. Run containers:
 
 ```
 docker-compose up
