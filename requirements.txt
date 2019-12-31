@@ -6,4 +6,5 @@ Flask-SQLAlchemy
 Flask-WTF
 Werkzeug
 gunicorn
+pytest
 # psycopg2-binary

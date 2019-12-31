@@ -2,6 +2,7 @@ version: '3'
 services: 
     flask-app:
         build: .
+        image: kryvokhyzha/basic-flask-app:latest
         command: gunicorn -b 0.0.0.0:5000 run:app --workers=1 --threads=1 --reload
         environment: 
             - FLASK_APP=run.py
