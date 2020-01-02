@@ -1,14 +1,22 @@
 version: '3'
 services: 
     flask-app:
-        build: .
+        build: ./flask-app
+        container_name: basic-flask-app
         image: kryvokhyzha/basic-flask-app:latest
         command: gunicorn -b 0.0.0.0:5000 run:app --workers=1 --threads=1 --reload
         environment: 
             - FLASK_APP=run.py
             - FLASK_DEBUG=1
             - PYTHONUNBUFFERED=TRUE
-        ports: 
-            - "5000:5000"
+        expose: 
+            - "5000"
         volumes: 
-            - ./:/root
+            - ./flask-app:/home/root
+    nginx:
+        build: ./nginx
+        ports: 
+            - "80:80"
+        container_name: nginx-flask
+        volumes: 
+            - ./flask-app:/home/root

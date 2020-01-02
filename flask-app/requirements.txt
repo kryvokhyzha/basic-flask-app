@@ -3,8 +3,10 @@ Flask
 Flask-Login
 Flask-SQLAlchemy
 # Flask-Uploads
+# flask-restful
 Flask-WTF
 Werkzeug
 gunicorn
+flasgger
 pytest
 # psycopg2-binary
